@@ -2,8 +2,8 @@
 <h1>OrthoTryOn: Geometric Orthogonalization for Conflict-Free Unified Fashion Generation</h1>
 
 <a href="<PAPER_URL>"><img src="https://img.shields.io/badge/Paper-PDF-red" alt="Paper"></a>
-<a href="<https://github.com/NJU-PCALab/OrthoTryOn>"><img src="https://img.shields.io/badge/GitHub-Code-black?logo=github" alt="GitHub"></a>
-<a href="<https://huggingface.co/Jerome-Young/OrthoTryOn>"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Model-blue" alt="Hugging Face"></a>
+<a href="https://github.com/NJU-PCALab/OrthoTryOn"><img src="https://img.shields.io/badge/GitHub-Code-black?logo=github" alt="GitHub"></a>
+<a href="https://huggingface.co/Jerome-Young/OrthoTryOn"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Model-blue" alt="Hugging Face"></a>
 <a href="https://huggingface.co/datasets/Jerome-Young/OrthoTryOn-Instructions"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-green" alt="Hugging Face Dataset"></a>
 
 </div>
@@ -57,7 +57,7 @@ Config: td-hm_hrnet-w48_8xb32-210e_coco-256x192
 Checkpoint: td-hm_hrnet-w48_8xb32-210e_coco-256x192-0e67c616_20220913.pth
 ```
 
-We generate garment-specific editing instructions using [Qwen2.5-VL-7B-Instruct](https://github.com/QwenLM/Qwen2.5-VL). During training annotation generation, the first image is the edited image and the second image is the gt target image. We use the following prompt:
+We generate garment-specific editing instructions using [Qwen2.5-VL-7B-Instruct](https://github.com/QwenLM/Qwen2.5-VL). During training annotation generation, the first image is the edited image and the second image is the ground-truth target image. We use the following prompt:
 
 > You are an expert fashion editor. You are provided with two images:
 > 1. The first image is the **Source Image** (Before). 
@@ -68,7 +68,7 @@ We generate garment-specific editing instructions using [Qwen2.5-VL-7B-Instruct]
 > - “Change the blue denim jacket to a red silk blouse.” 
 > - “Add a black leather belt to the dress.” 
 > - “Remove the graphic logo from the t-shirt.” 
-> - “Change the white long sleeves to a red and white striped short sleeves.” 
+> - “Change the white long-sleeved shirt to a red-and-white striped short-sleeved shirt.” 
 >
 > Focus only on the garment changes. Output ONLY the instruction sentence.
 
@@ -178,7 +178,7 @@ The `train_dataset.jsonl` file can be downloaded from [here](https://huggingface
 
 ```bash
 accelerate launch \
-  --config_file configs/accelerate_zero3.yaml \
+  --config_file misc/accelerate_config.yaml \
   train_examples/edit_lora/train_ortho.py \
   --config configs/train_ortho.yaml
   
