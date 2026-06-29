@@ -1,7 +1,7 @@
 <div align="center">
 <h1>OrthoTryOn: Geometric Orthogonalization for Conflict-Free Unified Fashion Generation</h1>
 
-<a href="<PAPER_URL>"><img src="https://img.shields.io/badge/Paper-PDF-red" alt="Paper"></a>
+<a href="https://arxiv.org/abs/2606.27880"><img src="https://img.shields.io/badge/Paper-PDF-red" alt="Paper"></a>
 <a href="https://github.com/NJU-PCALab/OrthoTryOn"><img src="https://img.shields.io/badge/GitHub-Code-black?logo=github" alt="GitHub"></a>
 <a href="https://huggingface.co/Jerome-Young/OrthoTryOn"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Model-blue" alt="Hugging Face"></a>
 <a href="https://huggingface.co/datasets/Jerome-Young/OrthoTryOn-Instructions"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-green" alt="Hugging Face Dataset"></a>
@@ -214,10 +214,13 @@ We thank the respective authors and contributors for making their models, datase
 If you find this repository useful, please cite the corresponding paper after publication.
 
 ```bibtex
-@article{orthotryon,
-  title={OrthoTryOn: <Final Paper Title>},
-  author={<Author List>},
-  journal={<Venue or arXiv Identifier>},
-  year={2026}
+@misc{yang2026orthotryon,
+      title={OrthoTryOn: Geometric Orthogonalization for Conflict-Free Unified Fashion Generation}, 
+      author={Zhaotong Yang and Ying Tai and Jiahui Zhan and Yu Zheng and Jianjun Qian and Jian Yang},
+      year={2026},
+      eprint={2606.27880},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2606.27880}, 
 }
 ```
